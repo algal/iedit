@@ -535,9 +535,9 @@ The candidate depends on the thing at point."
 (defun iedit-regexp-quote (exp)
   "Return a regexp string."
   (cl-case iedit-occurrence-type-local
-    ('symbol (concat "\\_<" (regexp-quote exp) "\\_>"))
-    ('word   (concat "\\<" (regexp-quote exp) "\\>"))
-    ('regexp exp)
+    (symbol (concat "\\_<" (regexp-quote exp) "\\_>"))
+    (word   (concat "\\<" (regexp-quote exp) "\\>"))
+    (regexp exp)
     ( t      (regexp-quote exp))))
 
 (defun iedit-mark-sgml-pair ()
